@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>売上管理システム（仮）</title>
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+	<div class="wrapper">
+	<header>
+		<h1><a href="../top.html">売上管理システム（仮）</a></h1>
+	</header>
+	<main>
+		<nav class="navigator">
+			<ol>
+				<li><a href="../employees/search.html">担当者管理</a></li>
+				<li><a href="../customers/search.html">顧客管理</a></li>
+				<li><a href="../products/search.html">商品管理</a></li>
+				<li><a href="../sales/index.hmtl">売上管理</a></li>
+			</ol>
+		</nav>
+		<article id="employee">
+			<section class="title">
+				<h2>商品管理</h2>
+				<ol>
+					<li><a href="./search.html">一覧</a></li>
+					<li><a href="./entry.html">登録</a></li>
+				</ol>
+			</section>
+			<section id="entry" class="content">
+				<h3>商品の削除</h3>
+				<p>以下の商品の情報を削除します。削除する場合は［削除］ボタンをクリックしてください。</p>
+				<p>削除しない場合は［キャンセル］ボタンをクリックすると商品検索ページに戻ることができます。</p>
+			</section>
+			<section id="detail">
+				<table class="slip">
+					<tr>
+						<th>ID</th>
+						<td>105</td>
+					</tr>
+					<tr>
+						<th>商品名</th>
+						<td>デジタルカメラ</td>
+					</tr>
+					<tr>
+						<th>型番</th>
+						<td>E5555</td>
+					</tr>
+					<tr>
+						<th>標準価格</th>
+						<td>18600.00</td>
+					</tr>
+					<tr>
+						<th>限界割引率</th>
+						<td>0.80</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<form name="detail">
+								<button formaction="./confirm.html" formmethod="post">削除</button>
+								<button formaction="./search.html" formmethod="post">キャンセル</button>
+							</form>
+						</td>
+					</tr>
+				</table>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div id="copyright">&copy; 2021 villageworks</div>
+	</footer>
+	</div>
+</body>
+</html>

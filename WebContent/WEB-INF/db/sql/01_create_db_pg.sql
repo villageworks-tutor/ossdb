@@ -1,0 +1,6 @@
+DROP DATABASE IF EXISTS sample;
+DROP USER IF EXISTS student;
+
+CREATE USER student WITH PASSWORD 'himitu';
+CREATE DATABASE sample OWNER student ENCODING 'utf8';
+

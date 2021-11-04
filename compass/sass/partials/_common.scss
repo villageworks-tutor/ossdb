@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+// テーマカラー
+$base-color: #F0ECE2;
+$main-color: #DFD3C3;
+$accent-color-1: #C7B198;
+$accent-color-2: #596E79;
+
+// 基本フォントサイズ
+$basic-font-scale: 62.5%;
+$basic-font-size: 1.4rem;
+
+// サイズスケール
+$huge-scale: 2.10;
+$larger-scale: 1.60;
+$large-scale: 1.15;
+$normal-scale: 1.00;
+$small-scale: 0.90;
+$note-sace: 0.85;
+
+// 見出しの基本フォントサイズ
+$h1-scale: $huge-scale;
+$h2-scale: $larger-scale;
+$h3-scale: $large-scale;
+
+// 基本フォントサイズの引数$scale分だけのサイズを返す
+@function calcSizeByScale($scale) {
+	@return $basic-font-size * $scale;
+}
+
+// 表の一覧リスト形式
+@mixin createListTable() {
+	&.list {
+		margin-bottom: calcSizeByScale(1.50);
+		border-bottom: 1px solid $accent-color-1;
+		caption {
+			margin: calcSizeByScale(0.375) 0 calcSizeByScale(1.00) 0;
+		}
+		tr {
+			&:nth-child(odd) {
+				background-color:  $base-color;
+			}
+			&:first-child {
+				background-color: $accent-color-1;
+				color: $accent-color-2;
+			}
+			th, td {
+				padding: calcSizeByScale(0.50) calcSizeByScale(0.75);
+			}
+			th {
+				font-weight: bold;
+				&:first-child {
+					text-align: center;
+				}
+				&:not(:first-child) {
+					padding-left: calcSizeByScale(1.25);
+				}
+			}
+		}
+	}
+}
+// 表の個票表示
+@mixin createSlipTable() {
+	&.slip {
+		margin-bottom: calcSizeByScale(1.50);
+		border-bottom: 1px solid $accent-color-1;
+		tr {
+			&:nth-child(odd) {
+				background-color:  $base-color;
+			}
+			th, td {
+				padding: calcSizeByScale(0.50) calcSizeByScale(0.75);
+			}
+			th {
+				font-weight: bold;
+				text-align: right;
+			}
+			td {
+				&[colspan] {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+// アンカータグの表示のボタン形式：bootstrapを借用 (^_^;
+@mixin createLinkButton() {
+	a.button-default {
+		width: 2rem;
+		height: 1.75rem;
+		display: inline-block;
+		padding: 6px 12px;
+		margin-bottom: 0;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 1.42857143;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		-ms-touch-action: manipulation;
+				touch-action: manipulation;
+		cursor: pointer;
+		-webkit-user-select: none;
+			-moz-user-select: none;
+				-ms-user-select: none;
+						user-select: none;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		color: #333;
+		background-color: linen;
+		border-color: dimgray;
+		text-decoration: none;
+	}	
+}

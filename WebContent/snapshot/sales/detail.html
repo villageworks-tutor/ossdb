@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>売上管理システム（仮）</title>
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+	<div class="wrapper">
+	<header>
+		<h1><a href="../top.html">売上管理システム（仮）</a></h1>
+	</header>
+	<main>
+		<nav class="navigator">
+			<ol>
+				<li><a href="../employees/search.html">担当者管理</a></li>
+				<li><a href="../customers/search.html">顧客管理</a></li>
+				<li><a href="../products/search.html">商品管理</a></li>
+				<li><a href="../sales/index.hmtl">売上管理</a></li>
+			</ol>
+		</nav>
+		<article id="sales">
+			<section class="title">
+				<h2>売上管理</h2>
+				<ol>
+					<li><a href="./search.html">一覧</a></li>
+					<li><a href="./entry.html">登録</a></li>
+				</ol>
+			</section>
+			<section id="entry" class="content">
+				<h3>売上詳細</h3>
+				<p>更新する場合は［更新］ボタン、削除する場合は［削除］ボタンをクリックしてください。</p>
+			</section>
+			<section id="detail">
+				<table class="list">
+					<caption>売上伝票</caption>
+					<tr>
+						<th>伝票番号</th>
+						<th>売上日</th>
+						<th>担当者名</th>
+						<th>顧客名</th>
+						<th>売上金額</th>
+					</tr>
+					<tr>
+						<td>113</td>
+						<td>1994-11-18</td>
+						<td>釜本 喜美子</td>
+						<td>北島 浩二</td>
+						<td>8500.00</td>
+					</tr>
+				</table>
+				<table class="list">
+					<caption>伝票明細</caption>
+					<tr>
+						<th>明細番号</th>
+						<th>商品番号</th>
+						<th>商品名</th>
+						<th>商品単価</th>
+						<th>数量</th>
+						<th>小計</th>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div id="copyright">&copy; 2021 villageworks</div>
+	</footer>
+	</div>
+</body>
+</html>

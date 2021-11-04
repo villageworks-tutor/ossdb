@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>売上管理システム（仮）</title>
+	<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+	<header>
+		<h1><a href="../top.html">売上管理システム（仮）</a></h1>
+	</header>
+	<main>
+		<nav class="navigator">
+			<ol>
+				<li><a href="../employees/search.html">担当者管理</a></li>
+				<li><a href="../customers/search.html">顧客管理</a></li>
+				<li><a href="../products/search.html">商品管理</a></li>
+				<li><a href="../sales/index.html">売上管理</a></li>
+			</ol>
+		</nav>
+		<article id="employee">
+			<section class="title">
+				<h2>顧客管理</h2>
+				<ol>
+					<li><a href="./search.html">一覧</a></li>
+					<li><a href="./entry.html">登録</a></li>
+				</ol>
+			</section>
+			<section id="search" class="content">
+				<h3>顧客検索</h3>
+				<p>検索する担当者の氏名を一部または全部を入力して［検索］ボタンをクリックしください。</p>
+				<p>未入力で［検索］ボタンをクリックした場合は全件検索が実行されます。</p>
+				<form id="entry">
+					<input type="text" name="name" id="name">
+					<button formaction="./search.html">検索</button>
+				</form>
+				<form id="result">
+					<p class="message">20件のレコードが見つかりました。</p>
+					<table class="list">
+						<tr>
+							<th>ID</th>
+							<th>氏名</th>
+							<th>住所</th>
+							<th>電話場号</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">1</a></td>
+							<td>阪上徹</td>
+							<td>和歌山県和歌山市</td>
+							<td>073-123-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">2</a></td>
+							<td>松坂宏</td>
+							<td>東京都千代田区</td>
+							<td>03-3158-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">3</a></td>
+							<td>北島浩二</td>
+							<td>大阪府大阪市北区</td>
+							<td>06-1234-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">4</a></td>
+							<td>永井光夫</td>
+							<td>東京都渋谷区</td>
+							<td>03-3124-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">5</a></td>
+							<td>関根修一</td>
+							<td>大阪府泉佐野市</td>
+							<td>0724-99-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">6</a></td>
+							<td>木田直美</td>
+							<td>東京都中央区</td>
+							<td>03-3333-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">7</a></td>
+							<td>片桐昇</td>
+							<td>東京都新宿区</td>
+							<td>03-1111-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">8</a></td>
+							<td>田中正敏</td>
+							<td>東京都品川区</td>
+							<td>03-2222-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">9</a></td>
+							<td>西口和夫</td>
+							<td>東京都目黒区下目黒</td>
+							<td>03-3333-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">10</a></td>
+							<td>山口克巳</td>
+							<td>東京都大田区</td>
+							<td>03-4444-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">11</a></td>
+							<td>加藤昭夫</td>
+							<td>神奈川県川崎市</td>
+							<td>044-505-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">12</a></td>
+							<td>石橋健太郎</td>
+							<td>札幌市中央区</td>
+							<td>011-555-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">13</a></td>
+							<td>米田恵美子</td>
+							<td>東京都港区虎ノ門</td>
+							<td>03-3987-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">14</a></td>
+							<td>松田純一</td>
+							<td>東京都千代田区大手町</td>
+							<td>03-3975-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">15</a></td>
+							<td>松下晴彦</td>
+							<td>東京都板橋区</td>
+							<td>03-3123-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">16</a></td>
+							<td>安井和義</td>
+							<td>愛知県東海市</td>
+							<td>0560-448-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">17</a></td>
+							<td>高沢千夏</td>
+							<td>大阪府大阪市大淀区</td>
+							<td>06-6777-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">18</a></td>
+							<td>島田良子</td>
+							<td>東京都渋谷区</td>
+							<td>03-3698-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">19</a></td>
+							<td>吉田正也</td>
+							<td>神奈川県川崎市</td>
+							<td>044-888-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">20</a></td>
+							<td>藤田幹夫</td>
+							<td>東京都中央区</td>
+							<td>03-3578-XXXX</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+					</table>
+				</section>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div id="copyright">&copy; 2021 villageworks</div>
+	</footer>
+	</div>
+</body>
+</html>

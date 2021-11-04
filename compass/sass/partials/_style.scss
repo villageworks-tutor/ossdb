@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import "./common";
+// @import "./employee";
+
+/** HTMLの基本スタイル */
+html {
+	font-size: $basic-font-scale;
+	body {
+		color: $accent-color-2;
+		background-color: white;
+		font-size: $basic-font-size;
+		line-height: 1.4;
+		.wrapper {
+			margin: setSizeByScale(1.50) setSizeByScale(2.50);
+			background-color: $base-color;
+			border: 1px solid dimgray;
+			header, main, nav, footer {
+				padding: setSizeByScale(0.75) setSizeByScale(1.25);
+			}
+			header {
+				background-color: $accent-color-1;
+				padding-top: setSizeByScale(1.25);
+				padding-bottom: setSizeByScale(1.25);
+				margin-bottom: setSizeByScale(0.50);
+				text-align: center;
+			}
+			main {
+				overflow: hidden;
+				nav, article {
+					float: left;
+				}
+				nav {
+					width: 15%;
+					margin: setSizeByScale(0.75) setSizeByScale(-1.00);
+					font-size: setSizeByScale(1.20);
+				}
+				article {
+					width:85%;
+					padding: setSizeByScale(1.25) setSizeByScale(0.75);
+					background-color: white;
+					section {
+						margin: 0 setSizeByScale(1.25);
+						.link {
+							margin: setSizeByScale(0.75) setSizeByScale(1.50);
+						}
+					}
+					p {
+						line-height: 1.4;
+					}
+				}
+			}
+			footer {
+				text-align:  center;
+				font-size: smaller;
+				font-family: 'Times New Roman', Times, serif;
+				font-style: italic;
+			}
+		}
+	}
+}
+
+/** 見出しのスタイル **/
+h1, h2, h3 {font-weight: bold;}
+h1 {font-size: setSizeByScale($huge-scale);}
+h2 {font-size: setSizeByScale($larger-scale);}
+h3 {
+	font-size: setSizeByScale($large-scale); 
+	margin: setSizeByScale(0.75);
+	margin-top: setSizeByScale(1.25);
+}
+
+/** 表の基本スタイル */
+table {
+	margin: 0 setSizeByScale(1.50);
+}
+
+/** 必須入力クラス */
+.required {
+	&:before {
+		content: "*";
+	}
+}

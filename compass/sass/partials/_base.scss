@@ -1,0 +1,128 @@
+@charset "utf-8";
+@import "./common";
+
+/** 見出しの基本スタイル */
+h1, h2, h3 {font-weight: bold;}
+h1 {font-size: calcSizeByScale($h1-scale);}
+h2 {font-size: calcSizeByScale($h2-scale);}
+h3 {font-size: calcSizeByScale($h3-scale);}
+
+// サイトタイトルのリンク形状のスタイル
+h1 {
+	a {
+		&:link, &:visited {
+			color: $accent-color-1;
+		}
+	}
+}
+
+/** サイト全体のスタイル */
+html {
+	font-size: $basic-font-scale;
+	body {
+		// 基本スタイル
+		color: $accent-color-2;
+		background-color: white;
+		padding: calcSizeByScale($large-scale);
+		font-size: $basic-font-size;
+		// 内容のスタイル
+		.wrapper {
+			min-width: calcSizeByScale(55);
+			background-color: $main-color;
+			// ヘッダとフッタのスタイル
+			header, footer {
+				color: $accent-color-1;
+				background-color: $accent-color-2;
+			}
+			// ヘッダ領域のスタイル
+			header {
+				padding: calcSizeByScale(1.75) calcSizeByScale(1.25);
+			}
+			// フッタ領域のスタイル
+			footer {
+				padding: calcSizeByScale(0.50) calcSizeByScale(1.25);
+				#copyright {
+					font-family: Georgia, 'Times New Roman', Times, serif;
+					font-size: calcSizeByScale($large-scale);
+					font-style: italic;
+					text-align: center;
+				}
+			}
+			// メイン領域のスタイル
+			main {
+				overflow: hidden;
+				line-height: 1.4;
+				nav, article {
+					float: left;
+					margin: calcSizeByScale(0.75) calcSizeByScale(1.25);
+					padding: calcSizeByScale(0.25) calcSizeByScale(0.75);
+					background-color: white;
+				}
+				// ページナビゲータのスタイル
+				nav {
+					margin-right: calcSizeByScale(0.375);
+					font-size: calcSizeByScale(1.05);
+				}
+				// メインコンテンツのスタイル
+				article {
+					min-width: calcSizeByScale(45);
+					margin-left: calcSizeByScale(0.375);
+					padding-left: calcSizeByScale(1.75);
+					.title {
+						h2 {
+							margin-left: calcSizeByScale(-0.75);
+						}
+						ol {
+							margin: 0 0 calcSizeByScale(1.25) 0;
+							li {
+								display: inline;
+								margin-right: calcSizeByScale(0.25);
+							}
+						}
+					}
+					.content {
+						h3 {
+							margin: calcSizeByScale(0.50) 0 calcSizeByScale(0.125) 0;
+						}
+						p {
+							padding-left: calcSizeByScale(0.50);
+							padding: calcSizeByScale(0.25) calcSizeByScale(0.50);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+form {
+	&#entry {
+		margin: calcSizeByScale(0.75) 0 0 calcSizeByScale(1.25);
+	}
+	&[name="detail"] {
+		button {
+			margin: calcSizeByScale(0.75) 0 calcSizeByScale(0.50) 0;
+		}
+	}
+}
+
+// 検索結果メッセージのスタイル
+.message {
+	margin: 0 0 calcSizeByScale(0.50);
+}
+
+// エラーメッセージの文字色
+.errors{
+	color: tomato;
+	margin-bottom: calcSizeByScale(0.50);
+}
+
+// 必須入力表示
+.required {
+	&:after {
+		content: "*";
+	}
+}
+
+
+@include createLinkButton;

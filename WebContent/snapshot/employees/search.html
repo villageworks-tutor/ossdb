@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>売上管理システム（仮）</title>
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+	<div class="wrapper">
+	<header>
+		<h1><a href="../top.html">売上管理システム（仮）</a></h1>
+	</header>
+	<main>
+		<nav class="navigator">
+			<ol>
+				<li><a href="../employees/search.html">担当者管理</a></li>
+				<li><a href="../customers/search.html">顧客管理</a></li>
+				<li><a href="../products/search.html">商品管理</a></li>
+				<li><a href="../sales/index.html">売上管理</a></li>
+			</ol>
+		</nav>
+		<article id="employee">
+			<section class="title">
+				<h2>担当者管理</h2>
+				<ol>
+					<li><a href="./search.html">一覧</a></li>
+					<li><a href="./entry.html">登録</a></li>
+				</ol>
+			</section>
+			<section id="search" class="content">
+				<h3>担当者検索</h3>
+				<p>検索する担当者の氏名を一部または全部を入力して［検索］ボタンをクリックしください。</p>
+				<p>未入力で［検索］ボタンをクリックした場合は全件検索が実行されます。</p>
+				<form id="entry">
+					<input type="text" name="name" id="name">
+					<button formaction="./search.html">検索</button>
+				</form>
+				<form id="result">
+					<table class="list">
+						<caption>11件のレコードが見つかりました。</caption>
+						<tr>
+							<th>ID</th>
+							<th>氏名</th>
+							<th>所属部門</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">1</a></td>
+							<td>羽生章洋</td>
+							<td>10：営業部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">2</a></td>
+							<td>釜本喜美子</td>
+							<td>10：営業部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">3</a></td>
+							<td>安部弘江</td>
+							<td>20：開発部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">4</a></td>
+							<td>松村秀和</td>
+							<td>20：開発部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">5</a></td>
+							<td>萩原恵理子</td>
+							<td>30：企画部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">6</a></td>
+							<td>岡田奈緒子</td>
+							<td>30：企画部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">7</a></td>
+							<td>井上尚志</td>
+							<td>30：企画部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">8</a></td>
+							<td>西口麻衣子</td>
+							<td>40：管理部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">9</a></td>
+							<td>滝本順三</td>
+							<td>40：管理部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">10</a></td>
+							<td>工藤新一</td>
+							<td>40：管理部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">11</a></td>
+							<td>毛利光太郎</td>
+							<td>50：製造部</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+								<button formaction="./delete.html" formmethod="post">削除</button>
+							</td>
+						</tr>
+					</table>
+				</section>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div id="copyright">&copy; 2021 villageworks</div>
+	</footer>
+	</div>
+</body>
+</html>

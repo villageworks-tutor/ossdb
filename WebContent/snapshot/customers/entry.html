@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>売上管理システム（仮）</title>
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+	<div class="wrapper">
+	<header>
+		<h1><a href="../top.html">売上管理システム（仮）</a></h1>
+	</header>
+	<main>
+		<nav class="navigator">
+			<ol>
+				<li><a href="../employees/search.html">担当者管理</a></li>
+				<li><a href="../customers/search.html">顧客管理</a></li>
+				<li><a href="../products/search.html">商品管理</a></li>
+				<li><a href="../sales/index.hmtl">売上管理</a></li>
+			</ol>
+		</nav>
+		<article id="employee">
+			<section class="title">
+				<h2>顧客管理</h2>
+				<ol>
+					<li><a href="./search.html">一覧</a></li>
+					<li><a href="./entry.html">登録</a></li>
+				</ol>
+			</section>
+			<section id="entry" class="content">
+				<h3>顧客情報の更新</h3>
+				<p>更新する項目を入力して［更新］ボタンボタンをクリックしてください。</p>
+				<p>項目名の末尾に表示されている「*」は必須入力項目であることを意味しています。</p>
+			</section>
+			<section id="detail">
+				<ol class="errors">
+					<li>氏名が入力されていません。</li>
+					<li>入社年月日が入力されていません。</li>
+				</ol>
+				<form name="entry">
+				<table class="slip">
+					<tr>
+						<th class="required">ID</th>
+						<td>9</td>
+					</tr>
+					<tr>
+						<th class="required">氏名</th>
+						<td><input type="text" name="name" value="西口和夫" /></td>
+					</tr>
+					<tr>
+						<th class="required">住所</th>
+						<td><input type="text" name="address" value="東京都目黒区下目黒" /></td>
+					</tr>
+					<tr>
+						<th class="required">電話番号</th>
+						<td><input type="text" name="tel" value="03-3333-XXXX" /></td>
+					</tr>
+					<tr>
+						<th>FAX番号</th>
+						<td><input type="text" name="tel" value="03-3333-XXXX" /></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<button formaction="./confirm.html" formmethod="post">更新</button>
+							<button type="reset">リセット</button>
+						</td>
+					</tr>
+				</table>
+				</form>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div id="copyright">&copy; 2021 villageworks</div>
+	</footer>
+	</div>
+</body>
+</html>

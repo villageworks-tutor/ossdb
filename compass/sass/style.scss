@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "./partials/base";
+
+#search, #result, #detail {
+	margin: calcSizeByScale(0.75) calcSizeByScale(1.25);
+	table {
+		// リスト形式（一覧表）のスタイル
+		@include createListTable;
+		// 個票形式のスタイル
+		@include createSlipTable;
+	}
+}

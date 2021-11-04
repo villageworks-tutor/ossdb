@@ -1,0 +1,239 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/** 見出しの基本スタイル */
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.94rem;
+}
+
+h2 {
+  font-size: 2.24rem;
+}
+
+h3 {
+  font-size: 1.61rem;
+}
+
+h1 a:link, h1 a:visited {
+  color: #C7B198;
+}
+
+/** サイト全体のスタイル */
+html {
+  font-size: 62.5%;
+}
+html body {
+  color: #596E79;
+  background-color: white;
+  padding: 1.61rem;
+  font-size: 1.4rem;
+}
+html body .wrapper {
+  min-width: 77rem;
+  background-color: #DFD3C3;
+}
+html body .wrapper header, html body .wrapper footer {
+  color: #C7B198;
+  background-color: #596E79;
+}
+html body .wrapper header {
+  padding: 2.45rem 1.75rem;
+}
+html body .wrapper footer {
+  padding: 0.7rem 1.75rem;
+}
+html body .wrapper footer #copyright {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.61rem;
+  font-style: italic;
+  text-align: center;
+}
+html body .wrapper main {
+  overflow: hidden;
+  line-height: 1.4;
+}
+html body .wrapper main nav, html body .wrapper main article {
+  float: left;
+  margin: 1.05rem 1.75rem;
+  padding: 0.35rem 1.05rem;
+  background-color: white;
+}
+html body .wrapper main nav {
+  margin-right: 0.525rem;
+  font-size: 1.47rem;
+}
+html body .wrapper main article {
+  min-width: 63rem;
+  margin-left: 0.525rem;
+  padding-left: 2.45rem;
+}
+html body .wrapper main article .title h2 {
+  margin-left: -1.05rem;
+}
+html body .wrapper main article .title ol {
+  margin: 0 0 1.75rem 0;
+}
+html body .wrapper main article .title ol li {
+  display: inline;
+  margin-right: 0.35rem;
+}
+html body .wrapper main article .content h3 {
+  margin: 0.7rem 0 0.175rem 0;
+}
+html body .wrapper main article .content p {
+  padding-left: 0.7rem;
+  padding: 0.35rem 0.7rem;
+}
+
+form#entry {
+  margin: 1.05rem 0 0 1.75rem;
+}
+form[name="detail"] button {
+  margin: 1.05rem 0 0.7rem 0;
+}
+
+.message {
+  margin: 0 0 0.7rem;
+}
+
+.errors {
+  color: tomato;
+  margin-bottom: 0.7rem;
+}
+
+.required:after {
+  content: "*";
+}
+
+a.button-default {
+  width: 2rem;
+  height: 1.75rem;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #333;
+  background-color: linen;
+  border-color: dimgray;
+  text-decoration: none;
+}
+
+#search, #result, #detail {
+  margin: 1.05rem 1.75rem;
+}
+#search table.list, #result table.list, #detail table.list {
+  margin-bottom: 2.1rem;
+  border-bottom: 1px solid #C7B198;
+}
+#search table.list caption, #result table.list caption, #detail table.list caption {
+  margin: 0.525rem 0 1.4rem 0;
+}
+#search table.list tr:nth-child(odd), #result table.list tr:nth-child(odd), #detail table.list tr:nth-child(odd) {
+  background-color: #F0ECE2;
+}
+#search table.list tr:first-child, #result table.list tr:first-child, #detail table.list tr:first-child {
+  background-color: #C7B198;
+  color: #596E79;
+}
+#search table.list tr th, #search table.list tr td, #result table.list tr th, #result table.list tr td, #detail table.list tr th, #detail table.list tr td {
+  padding: 0.7rem 1.05rem;
+}
+#search table.list tr th, #result table.list tr th, #detail table.list tr th {
+  font-weight: bold;
+}
+#search table.list tr th:first-child, #result table.list tr th:first-child, #detail table.list tr th:first-child {
+  text-align: center;
+}
+#search table.list tr th:not(:first-child), #result table.list tr th:not(:first-child), #detail table.list tr th:not(:first-child) {
+  padding-left: 1.75rem;
+}
+#search table.slip, #result table.slip, #detail table.slip {
+  margin-bottom: 2.1rem;
+  border-bottom: 1px solid #C7B198;
+}
+#search table.slip tr:nth-child(odd), #result table.slip tr:nth-child(odd), #detail table.slip tr:nth-child(odd) {
+  background-color: #F0ECE2;
+}
+#search table.slip tr th, #search table.slip tr td, #result table.slip tr th, #result table.slip tr td, #detail table.slip tr th, #detail table.slip tr td {
+  padding: 0.7rem 1.05rem;
+}
+#search table.slip tr th, #result table.slip tr th, #detail table.slip tr th {
+  font-weight: bold;
+  text-align: right;
+}
+#search table.slip tr td[colspan], #result table.slip tr td[colspan], #detail table.slip tr td[colspan] {
+  text-align: center;
+}

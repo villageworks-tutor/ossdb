@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>売上管理システム（仮）</title>
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+	<div class="wrapper">
+	<header>
+		<h1><a href="../top.html">売上管理システム（仮）</a></h1>
+	</header>
+	<main>
+		<nav class="navigator">
+			<ol>
+				<li><a href="../employees/search.html">担当者管理</a></li>
+				<li><a href="../customers/search.html">顧客管理</a></li>
+				<li><a href="../products/search.html">商品管理</a></li>
+				<li><a href="../sales/index.html">売上管理</a></li>
+			</ol>
+		</nav>
+		<article id="sales">
+			<section class="title">
+				<h2>売上管理</h2>
+				<ol>
+					<li><a href="./search.html">一覧</a></li>
+					<li><a href="./entry.html">登録</a></li>
+				</ol>
+			</section>
+			<section id="search" class="content">
+				<h3>売上検索</h3>
+				<p>検索する売上の期間を入力して［検索］ボタンをクリックしください。</p>
+				<p>未入力で［検索］ボタンをクリックした場合は全件検索が実行されます。</p>
+				<form id="entry">
+					<table class="slip">
+						<tr>
+							<td>検索期間・開始日</td>
+							<td>
+								<select name="start_year">
+									<option value="1990">1990</option>
+									<option value="1991">1991</option>
+									<option value="1992">1992</option>
+									<option value="1993">1993</option>
+									<option value="1994">1994</option>
+									<option value="1995">1995</option>
+									<option value="1996">1996</option>
+									<option value="1997">1997</option>
+									<option value="1998">1998</option>
+									<option value="1999">1999</option>
+									<option value="2000">2000</option>
+									<option value="2001">2001</option>
+									<option value="2002">2002</option>
+									<option value="2003">2003</option>
+									<option value="2004">2004</option>
+									<option value="2005">2005</option>
+									<option value="2006">2006</option>
+									<option value="2007">2007</option>
+									<option value="2008">2008</option>
+									<option value="2009">2009</option>
+									<option value="2010">2010</option>
+									<option value="2011">2011</option>
+									<option value="2012">2012</option>
+									<option value="2013">2013</option>
+									<option value="2014">2014</option>
+									<option value="2015">2015</option>
+									<option value="2016">2016</option>
+									<option value="2017">2017</option>
+									<option value="2018">2018</option>
+									<option value="2019">2019</option>
+									<option value="2020">2020</option>
+									<option value="2021">2021</option>
+								</select>年
+								<select name="start_month">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+								</select>月
+							</td>
+						</tr>
+						<tr>
+							<td>検索期間・終了日</td>
+							<td>
+								<select name="end_year">
+									<option value="1990">1990</option>
+									<option value="1991">1991</option>
+									<option value="1992">1992</option>
+									<option value="1993">1993</option>
+									<option value="1994">1994</option>
+									<option value="1995">1995</option>
+									<option value="1996">1996</option>
+									<option value="1997">1997</option>
+									<option value="1998">1998</option>
+									<option value="1999">1999</option>
+									<option value="2000">2000</option>
+									<option value="2001">2001</option>
+									<option value="2002">2002</option>
+									<option value="2003">2003</option>
+									<option value="2004">2004</option>
+									<option value="2005">2005</option>
+									<option value="2006">2006</option>
+									<option value="2007">2007</option>
+									<option value="2008">2008</option>
+									<option value="2009">2009</option>
+									<option value="2010">2010</option>
+									<option value="2011">2011</option>
+									<option value="2012">2012</option>
+									<option value="2013">2013</option>
+									<option value="2014">2014</option>
+									<option value="2015">2015</option>
+									<option value="2016">2016</option>
+									<option value="2017">2017</option>
+									<option value="2018">2018</option>
+									<option value="2019">2019</option>
+									<option value="2020">2020</option>
+									<option value="2021">2021</option>
+								</select>年
+								<select name="end_month">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+								</select>月
+							</td>
+						</tr>
+					</table>
+				</form>
+				<form id="result">
+					<p class="message">8件のレコードが見つかりました。</p>
+					<table class="list">
+						<tr>
+							<th>ID</th>
+							<th>販売日</th>
+							<th>担当者</th>
+							<th>顧客</th>
+							<th>売上額</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">111</a></td>
+							<td>1994-10-13</td>
+							<td>羽生 章洋</td>
+							<td>阪上 徹</td>
+							<td>60000.00</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">112</a></td>
+							<td>1994-10-14</td>
+							<td>羽生 章洋</td>
+							<td>松坂 宏</td>
+							<td>20000.00</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">113</a></td>
+							<td>1994-11-18</td>
+							<td>釜本 喜美子</td>
+							<td>北島 浩二</td>
+							<td>85000.00</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">114</a></td>
+							<td>1994-11-18</td>
+							<td>釜本 喜美子</td>
+							<td>永井 光夫</td>
+							<td>60000.00</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">115</a></td>
+							<td>1994-12-18</td>
+							<td>安部 弘江</td>
+							<td>関根 修一</td>
+							<td>25000.00</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">116</a></td>
+							<td>1994-12-18</td>
+							<td>安部 弘江</td>
+							<td>木田 直美</td>
+							<td>30000.00</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">217</a></td>
+							<td>1995-01-18</td>
+							<td>松村 秀和</td>
+							<td>片桐 昇</td>
+							<td>40000.00</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a class="button-default" href="./detail.html">218</a></td>
+							<td>1995-01-18</td>
+							<td>松村 秀和</td>
+							<td>田中 正敏</td>
+							<td>10000.00</td>
+							<td>
+								<button formaction="./entry.html" formmethod="post">更新</button>
+							</td>
+						</tr>
+					</table>
+				</section>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div id="copyright">&copy; 2021 villageworks</div>
+	</footer>
+	</div>
+</body>
+</html>
